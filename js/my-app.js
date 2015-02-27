@@ -6,7 +6,10 @@ var myApp = new Framework7({
 // Export selectors engine
 var $$ = Dom7;
 
-var mainView = myApp.addView('.view-main');
+var mainView = myApp.addView('.view-main', {
+    dynamicNavbar: true,
+    domCache: true //enable inline pages
+});
 
 
 
@@ -17,7 +20,7 @@ $$('form.ajax-submit').on('submitted', function (e) {
     if ((response.success)) {
         window.location = "dash.html";
     } else {
-        myApp.alert(response.error.messagem, "Opá, algo errado");
+        myApp.alert(response.error.message, "Opa");
     }
 
 });

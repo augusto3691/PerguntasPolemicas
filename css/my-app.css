@@ -16,7 +16,7 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 .title-login{
-    font-size: 50px;
+    font-size: 25px;
     font-family: 'Source Sans Pro', sans-serif;
     margin-bottom: 40px;
 }
@@ -43,4 +43,7 @@ small{
     background-repeat: no-repeat;
     background-position: center;
 
+}
+.color-red{
+    color: white !important;
 }
