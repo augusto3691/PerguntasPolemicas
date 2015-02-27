@@ -1,0 +1,46 @@
+.align-center{
+    text-align: center;
+}
+.list-img{
+    width: 29px;
+    height: 29px;
+}
+.intro-point{
+    background-image: url('../img/coopBG.png');
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.title{
+    font-size: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.title-login{
+    font-size: 50px;
+    font-family: 'Source Sans Pro', sans-serif;
+    margin-bottom: 40px;
+}
+.title-points{
+    font-size: 60px;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+small{
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    position: relative;
+    bottom: 15px;
+}
+.division{
+
+    background-color: #252529;
+    margin: 0px;
+    height: 20px;
+    padding: 15px 10px 10px 10px;
+}
+.login-bg{
+
+    background-image: url('../img/loginBG.png') !important;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}

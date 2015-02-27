@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <title>Incentive Mobile</title>
+        <!-- Path to Framework7 Library CSS-->
+        <link rel="stylesheet" href="css/framework7.min.css">
+        <!-- Path to your custom app styles-->
+        <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/my-app.css">
+    </head>
+    <body>
+        <!-- Should be a direct child of BODY -->
+        <div class="login-screen modal-in">
+            <!-- Default view-page layout -->
+            <div class="view view-main">
+                <div class="page login-bg">
+                    <!-- page-content has additional login-screen content -->
+                    <div class="page-content login-screen-content">
+                        <div class="login-screen-title title-login color-white">Incentive</div>
+                        <!-- Login form -->
+                        <form action="JSON/login.json" data-type="json" method="POST" class="ajax-submit">
+
+                            <div style="margin: 0px 20px 0px 20px;" class="card">
+                                <div class="card-content">
+                                    <div class="card-content-inner">
+                                        <div class="list-block">
+
+
+                                            <ul>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">Username</div>
+                                                        <div class="item-input">
+                                                            <input type="text" name="u" placeholder="Nome do usuário">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <hr>
+                                                <li class="item-content">
+                                                    <div class="item-inner">
+                                                        <div class="item-title label">Senha</div>
+                                                        <div class="item-input">
+                                                            <input type="password" name="p" placeholder="Senha">
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                            </ul>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div> 
+                            <div class="list-block">
+                                <ul>
+                                    <li style="padding: 0px 20px 0px 20px;">
+                                        <button style="width: 100%;" class="button button-big button-fill color-green" type="submit" value="Submit">Log in</button>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/framework7.min.js" type="text/javascript"></script>
+        <script src="js/my-app.js" type="text/javascript"></script>
+    </body>
+</html>

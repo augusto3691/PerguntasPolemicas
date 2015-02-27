@@ -1,0 +1,9 @@
+{
+    "success": true,
+    "error": {
+        "code": 1,
+        "message": "Login Incorreto"
+    },
+    "data": [{
+        }]
+}
