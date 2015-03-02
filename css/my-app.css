@@ -47,6 +47,9 @@ small{
 .color-red{
     color: white !important;
 }
+a.color-red{
+    color: white !important;
+}
 .option-mark{
     background-image: url('../img/optionBackground.png') !important;
     height: 100px;
