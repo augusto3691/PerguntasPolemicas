@@ -47,3 +47,18 @@ small{
 .color-red{
     color: white !important;
 }
+.option-mark{
+    background-image: url('../img/optionBackground.png') !important;
+    height: 100px;
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position: center;
+    line-height: 100px;
+}
+.bg-gray{
+    background-color: #2a2a2a !important;
+}
+.bg-gray-light{
+    background-image: url('../img/coopBG.png') !important;
+}
