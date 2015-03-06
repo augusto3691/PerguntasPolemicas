@@ -17,6 +17,9 @@ $$('form.ajax-submit').on('submitted', function (e) {
 
 
     var response = JSON.parse(e.detail.xhr.responseText);
+
+    console.log(response);
+
     if ((response.success)) {
         window.location = "dash.html";
     } else {
