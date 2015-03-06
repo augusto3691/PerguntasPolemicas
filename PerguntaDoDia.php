@@ -3,17 +3,32 @@
 $link = mysql_connect('localhost', 'root', 'w64c74h41');
 mysql_select_db('perguntaspolemicas', $link);
 
+$hoje = date("Y-m-d");
 
 $sql = "SELECT * 
-        FROM   users
-        WHERE  login = '{$_REQUEST['u']}' and senha = md5('{$_REQUEST['p']}') and ativo = 1 ";
+        FROM   perguntas
+        WHERE  data = '{$hoje}'";
+
+
 
 $resultPergunta = mysql_query($sql);
 
 if (mysql_num_rows($resultPergunta)) {
 
-    $row = mysql_fetch_assoc($resultPergunta);
+    $rowPergunta = mysql_fetch_assoc($resultPergunta);
 
+    $sql = "SELECT * 
+        FROM   respostas
+        WHERE  id_pergunta = {$rowPergunta['id']}";
+
+    $resultRespostas = mysql_query($sql);
+
+    $rowRespostas = array();
+
+    while ($row = mysql_fetch_assoc($resultRespostas)) {
+
+        $rowRespostas[] = $row;
+    }
 
     $response = array(
         "success" => true,
@@ -21,7 +36,10 @@ if (mysql_num_rows($resultPergunta)) {
             "code" => null,
             "message" => null,
         ),
-        "data" => $row
+        "data" => array(
+            "pergunta" => $rowPergunta,
+            "respostas" => $rowRespostas
+        )
     );
 } else {
 
@@ -29,13 +47,11 @@ if (mysql_num_rows($resultPergunta)) {
         "success" => false,
         "error" => array(
             "code" => "1",
-            "message" => "login ou senha inválida",
+            "message" => "Nenhuma Pergunta disponível para o dia",
         ),
         "data" => null
     );
 }
-
-
 
 header("Access-Control-Allow-Origin: *");
 header("Content-Type:application/json");
